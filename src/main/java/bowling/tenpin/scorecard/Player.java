@@ -7,12 +7,12 @@ import bowling.tenpin.scorecard.frames.FramesImpl;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player{
+public final class Player{
 
-    private String name;
+    private final String name;
     private int score = 0;
 
-    public Player(String name){
+    public Player(final String name){
         this.name = name;
     }
 
@@ -20,7 +20,7 @@ public class Player{
         return name;
     }
 
-    public void addScore(int frameScore){
+    public void addScore(final int frameScore){
         score += frameScore;
     }
 
@@ -29,11 +29,11 @@ public class Player{
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Player player = (Player) o;
+        final Player player = (Player) o;
 
         if (name != null ? !name.equals(player.name) : player.name != null) return false;
 
